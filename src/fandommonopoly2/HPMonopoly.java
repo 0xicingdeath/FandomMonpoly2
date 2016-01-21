@@ -2990,6 +2990,7 @@ public class HPMonopoly implements MouseListener, ActionListener
                 whereAreYou.setForeground(Color.white);
                 whereAreYou.setBackground(moss);
                 whereAreYou.setFont(titleFont);
+                whereAreYou.setEditable(false);
 
             JPanel locations = new JPanel(new GridLayout(2,2));
                 locations.setSize(400, 400);
@@ -3035,7 +3036,7 @@ public class HPMonopoly implements MouseListener, ActionListener
                     info[i].setForeground(Color.white);
                 } //end of if statement
                 
-
+                info[i].setEditable(false);
             } //end of for loop.
 
             organize.add(whereAreYou, BorderLayout.NORTH);
@@ -3434,35 +3435,39 @@ public class HPMonopoly implements MouseListener, ActionListener
             JPanel organize = new JPanel(new BorderLayout());
                 organize.setBackground(brown);
 
-            JLabel whereAreYou = new JLabel("Where are you? Where's the Com Pewter?");
+            JTextField whereAreYou = new JTextField("Where are you? Where's the Com Pewter?");
                 whereAreYou.setForeground(Color.white);
+                whereAreYou.setEditable(false); 
 
             JPanel locations = new JPanel(new GridLayout(2,2));
                 locations.setSize(400, 400);
 
 
-            JLabel[] info = new JLabel[4];
+            JTextField[] info = new JTextField[4];
 
             for (int i = 0; i<info.length; i++)
             {
                 if (i == 0)
                 {
-                    info[i] = new JLabel(userName);
+                    info[i] = new JTextField(userName);
                     info[i].setFont(titleFont);
+                    info[i].setEditable(false); 
                     locations.add(info[i]);
                 } //end of if statement
 
                 if (i == 1)
                 {
-                    info[i] = new JLabel("Com Pewter");
+                    info[i] = new JTextField("Com Pewter");
                     info[i].setFont(titleFont);
+                    info[i].setEditable(false);
                     locations.add(info[i]);
                 } //end of if statement
 
                 if (i == 2)
                 {
-                    info [i] = new JLabel("Location: \n \n" +square[player[0].getCol()].getName());
+                    info [i] = new JTextField("Location: \n \n" +square[player[0].getCol()].getName());
                     info[i].setFont(normalFont);
+                    info[i].setEditable(false);
                     //info[i].setLineWrap(true);
                     locations.add(info[i]);
                     info[i].setBackground(brown);
@@ -3471,12 +3476,14 @@ public class HPMonopoly implements MouseListener, ActionListener
 
                 if (i == 3)
                 {
-                    info[i] = new JLabel("Location: \n\n" +square[player[1].getCol()].getName());
+                    info[i] = new JTextField("Location: \n\n" +square[player[1].getCol()].getName());
                     info[i].setFont(normalFont);
+                    info[i].setEditable(false);
                     locations.add(info[i]);
                     info[i].setBackground(brown);
                     info[i].setForeground(Color.white);
                 } //end of if statement
+                info[i].setEditable(false);
 
             } //end of for loop.
 
