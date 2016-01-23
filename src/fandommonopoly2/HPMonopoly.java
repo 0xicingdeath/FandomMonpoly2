@@ -993,7 +993,7 @@ public class HPMonopoly implements MouseListener, ActionListener
 
     long temp = 0; 
     
-    int x = (int) ((Math.random()*10)+1);
+    int x = (int) ((Math.random()*13)+1);
 
         if (x == 0) 
         {
@@ -1118,8 +1118,21 @@ public class HPMonopoly implements MouseListener, ActionListener
             
             player[0].setG(player[0].getG()-20);
             
-            
         } //end of else if statement for x = 11
+        
+        else if (x == 12)
+        {
+            JOptionPane.showMessageDialog(pane, "The ood, the red-eyed ood. \n 'Would you like some tea?' he says in a monotonic voice with his ball lighting up. \n Fortunately, you get out of this ordeal as the 'virus' doesn't actually do anything...\n this time...", "The Ood", JOptionPane.INFORMATION_MESSAGE);
+            
+        } //end of else if statment for x = 12 
+        
+        else if (x == 13)
+        {
+             JOptionPane.showMessageDialog(pane, "Sometimes goes wrong with the Ood that is serving you, so much for you being happy as long as your ood is happy. \n It's rather clear that your ood is not happy...\n\n Lose 200 galleons - as you're faced with this insane, scary ood. ", "The dark ood, the virus ood, the wrong ood. ", JOptionPane.INFORMATION_MESSAGE);
+             
+             player[0].setG(player[0].getG()-200);
+        } //end of else if statement for x = 13 
+        
         //************************************************Transportation*
         else if (x == 8) 
         {
