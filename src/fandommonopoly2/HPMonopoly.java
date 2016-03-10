@@ -126,9 +126,9 @@ public class HPMonopoly implements MouseListener, ActionListener
 
     //JLabel characterUser;
 
-    private boolean tracing = false;
+    private final boolean tracing = false;
 
-    private JLabel enterName = new JLabel("Please enter your name: ");
+    private final JLabel enterName = new JLabel("Please enter your name: ");
     private JTextArea name = new JTextArea();
 
     private JLabel propertyNorth[] = new JLabel[10];
@@ -1120,19 +1120,6 @@ public class HPMonopoly implements MouseListener, ActionListener
             
         } //end of else if statement for x = 11
         
-        else if (x == 12)
-        {
-            JOptionPane.showMessageDialog(pane, "The ood, the red-eyed ood. \n 'Would you like some tea?' he says in a monotonic voice with his ball lighting up. \n Fortunately, you get out of this ordeal as the 'virus' doesn't actually do anything...\n this time...", "The Ood", JOptionPane.INFORMATION_MESSAGE);
-            
-        } //end of else if statment for x = 12 
-        
-        else if (x == 13)
-        {
-             JOptionPane.showMessageDialog(pane, "Sometimes goes wrong with the Ood that is serving you, so much for you being happy as long as your ood is happy. \n It's rather clear that your ood is not happy...\n\n Lose 200 galleons - as you're faced with this insane, scary ood. ", "The dark ood, the virus ood, the wrong ood. ", JOptionPane.INFORMATION_MESSAGE);
-             
-             player[0].setG(player[0].getG()-200);
-        } //end of else if statement for x = 13 
-        
         //************************************************Transportation*
         else if (x == 8) 
         {
@@ -1378,6 +1365,26 @@ public class HPMonopoly implements MouseListener, ActionListener
             
             player[0].setG(player[0].getG()+200);
         } //end of else if statement 
+        
+        else if (x == 13)
+        {
+            JOptionPane.showMessageDialog(pane, "The ood, the red-eyed ood. \n 'Would you like some tea?' he says in a monotonic voice with his ball lighting up. \n Fortunately, you get out of this ordeal as the 'virus' doesn't actually do anything...\n this time...", "The Ood", JOptionPane.INFORMATION_MESSAGE);
+            
+        } //end of else if statment for x = 12 
+        
+        else if (x == 14)
+        {
+             JOptionPane.showMessageDialog(pane, "Sometimes goes wrong with the Ood that is serving you, so much for you being happy as long as your ood is happy. \n It's rather clear that your ood is not happy...\n\n Lose 200 galleons - as you're faced with this insane, scary ood. ", "The dark ood, the virus ood, the wrong ood. ", JOptionPane.INFORMATION_MESSAGE);
+             
+             player[0].setG(player[0].getG()-200);
+        } //end of else if statement for x = 13     
+        
+        else if (x == 15)
+        {
+            JOptionPane.showMessageDialog(pane, "It seems that you are needed at Buckingham Palace to aid Sherlock in his amazing discoveries.\n \n Gain 20 galleons for your work. ", "GOING ON AN ADVENTURE WITH SHERLOCK HOLMES", JOptionPane.INFORMATION_MESSAGE);
+            
+            player[0].setG(player[0].getG()-20);
+        } //end of else if statement for x = 15
 
         //Shows no matter what happens 
         JOptionPane.showMessageDialog(pane, "Your gringotts account now has: " + player[0].getG() + ". Your opponent, the Com Pewter, has: " + player[1].getG() + " .", "Gringotts Accounts", JOptionPane.INFORMATION_MESSAGE);
