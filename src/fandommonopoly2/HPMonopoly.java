@@ -27,21 +27,35 @@
     -> Started to think about it
     -> There's gotta be unifying factor that joins certain properties of the same colour together
 3. Computer Artificial Intelligence in terms of whether to purchase something or not
-        1. if player[0] owns 2 of those colours already, then you'll want to buy it to over-write their code
-        2. if you have 2 of colours out of three, then you'll want to purchase the property
-        3. if no one owns any of the colours, then you'll likely want to purchase teh product (just tart from a ertain number because otherwise the program will apporach 0
+        1. if player[0] owns 2 of those colours already, then you'll want to buy it to over-write their code from the user.
+        2. if you have 2 of colours out of three, then you'll want to purchase the property from the computer.
+        3. if no one owns any of the colours, then you'll likely want to purchase the product (just a certain number because otherwise the program will apporach 0, which means the game's going to end).
+        4. 
 4. DONE Not having to hardcode all the data located in the initalize(); method
+    -> Use a for loop with the number of entires 54 properties (is that number right?) 
+    -> Print it out to a file before you make any changes, and just make the entire method a comment ater making the file 
+    -> DON'T TOUCH THE FILE AFTER PRINTING IT OUT OTHERWISE IT'S JUST GOING TO BE UGH. 
+    -> Read in the same order that you would read it out otherwise you're probably going to throw an exception where something should be a String and another thing should be like a long or something. 
    DONE: using an infile buffered reader to read in everything from the file and put it straight into the array of objects, using the protection methods
     -> already done and completed for the main part of the file, as long as no one touches that file ever again! 
 5. ?? Debug layered pane -> why is it that no one can find out how to display the pawns, even if they are at the topmost layer?
-    -> consider asking Justin again or Thomas to take a look at the code
+    -> consider asking Justin again or Thomas to take a look at the code (DONE)...>.> 
+            --> No one can find out what's going wrong.
     -> all if statements in the mouseClicked method are "useless" other than rollDie and whereAmI if I can't get the pawns working
             -> could comment it out?
+            -> or do I delete it? GAHH.
     -> but we still want an error message to show up if you press "pick up card" and you aren't even on that spot..
+            -> but you dont even use the things anyways, so if it doesn't display, what would be the point?
 6. Known Bug: if you try to exit, and then press no, it reloads the pane but without the initial immage 
-    -> not sure how to change this yet, unless i put all the main graphics into a different method for  
+    -> not sure how to change this yet, unless i put all the main graphics into a different method for not restarting it. 
+    -> but howwww? :/ 
 7. Making it an executable so you can just double click on it like an exe file. 
     -> Except that for executables, it's sort of a "windows" file instead of mac, so what's the mac equivalent of an exe? 
+8. Another known bug - actually it's not a bug, I know how to fix it, it's just that it's very time consuming 
+    -> Get rid of the spaces in front of the periods..cause like they're ugly. 
+    -> I guess bug just isn't a good word for what I'm saying except that it's ugly so I should definitely fix that when I have free time. 
+    -> Also sometimes there is no JOptionPane for the thing that sticks out when the computer purchases a property and you're just like WHAT? 
+    -> 
 */
 
 package fandommonopoly2;
@@ -858,7 +872,7 @@ public class HPMonopoly implements MouseListener, ActionListener
     /****************************************************************************************************************************************************************************
      * Description of Method: This is where most of the game will take place - at least the board game.
      * Parameters and Return Type: There is nothing that this program is going to receive or return.
-     * Preconditions: All the pictures must be in the folder nataliechin/Macintosh HD/NetBeansProjects/FandomMonopoly/MonopolyPics
+     * Preconditions: All the pictures must be in the project folder
      * Postconditions: The game will keep going until well, it dies.
      ****************************************************************************************************************************************************************************/
 
