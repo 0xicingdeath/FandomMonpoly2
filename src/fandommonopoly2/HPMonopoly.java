@@ -145,31 +145,31 @@ public class HPMonopoly implements MouseListener, ActionListener
     private final JLabel enterName = new JLabel("Please enter your name: ");
     private JTextArea name = new JTextArea();
 
-    private JLabel propertyNorth[] = new JLabel[10];
-    private JLabel propertyEast[] = new JLabel[8];
-    private JLabel propertySouth[] = new JLabel[10];
-    private JLabel propertyWest[] = new JLabel[8];
+    private final JLabel propertyNorth[] = new JLabel[10];
+    private final JLabel propertyEast[] = new JLabel[8];
+    private final JLabel propertySouth[] = new JLabel[10];
+    private final JLabel propertyWest[] = new JLabel[8];
 
     private JLabel rent[] = new JLabel[36];
 
-    private JLabel propertyNorthLarge[] = new JLabel[10];
-    private JLabel propertyEastLarge[] = new JLabel[8];
-    private JLabel propertySouthLarge[] = new JLabel[10];
-    private JLabel propertyWestLarge[] = new JLabel[8];
+    private final JLabel propertyNorthLarge[] = new JLabel[10];
+    private final JLabel propertyEastLarge[] = new JLabel[8];
+    private final JLabel propertySouthLarge[] = new JLabel[10];
+    private final JLabel propertyWestLarge[] = new JLabel[8];
 
-    private JLabel gringottsUser  = new JLabel();
-    private JLabel gringottsComp = new JLabel();
+    private final JLabel gringottsUser  = new JLabel();
+    private final JLabel gringottsComp = new JLabel();
 
-    private JButton goComPewter = new JButton("Go, Com Pewter");
+    private final JButton goComPewter = new JButton("Go, Com Pewter");
 
-    private JPanel getInfo = new JPanel(new GridLayout(0, 2));
+    private final JPanel getInfo = new JPanel(new GridLayout(0, 2));
 
     private JPanel namePanel = new JPanel(new GridLayout(3,0));
 
-    private JButton continueName = new JButton("Continue");
+    private final JButton continueName = new JButton("Continue");
 
     //JButtons for Welcome Screen:
-    private JButton continueWelcome = new JButton("Menu");
+    private final JButton continueWelcome = new JButton("Menu");
 
     //Components needed for Menu Frame:
     private JButton continueMenu = new JButton("Play Game");
@@ -192,13 +192,13 @@ public class HPMonopoly implements MouseListener, ActionListener
     private JButton[] buyPropertiesWest = new JButton [8];
 
     //Required fonts
-    private Font titleFont = new Font("Harry P", Font.PLAIN , 25);
-    private Font normalFont = new Font("Herculanum", Font.PLAIN, 20);
-    private Font welcomeFont = new Font("Harry P", Font.BOLD, 100);
+    private final Font titleFont = new Font("Harry P", Font.PLAIN , 25);
+    private final Font normalFont = new Font("Herculanum", Font.PLAIN, 20);
+    private final Font welcomeFont = new Font("Harry P", Font.BOLD, 100);
 
     private JButton rollDie = new JButton("Roll the Dice. ");
 
-    private JLabel centrePic = new JLabel(new ImageIcon("mainBoard.png"));
+    private final JLabel centrePic = new JLabel(new ImageIcon("mainBoard.png"));
 
     //Declarations for the menu bar  on Welcome Screen. :
     private JMenuBar menuBarWelcome = new JMenuBar();
@@ -211,26 +211,26 @@ public class HPMonopoly implements MouseListener, ActionListener
     private JMenuItem[] menuMenuItem = new JMenuItem[3];
 
     //JMenu on Game Screen
-    private JMenuBar gameBarMenu = new JMenuBar();
-    private JMenu gameMenu = new JMenu("Menu");
-    private JMenuItem[] menuGameItem = new JMenuItem[4];
+    private final JMenuBar gameBarMenu = new JMenuBar();
+    private final JMenu gameMenu = new JMenu("Menu");
+    private final JMenuItem[] menuGameItem = new JMenuItem[4];
 
     //Colours
-    private Color brown = new Color(128, 64, 0);
-    private Color moss = new Color(0, 128, 64);
+    private final Color brown = new Color(128, 64, 0);
+    private final Color moss = new Color(0, 128, 64);
 
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) 
     {
-     new HPMonopoly();   //calling constructor
+        new HPMonopoly();   
     } //end of main method.
 
     HPMonopoly() 
     {
         initialize(); //calling initialize (which yes, includes all the houses)
-        welcome(); //calling welcome
+        welcome(); 
     } //end of constructor method
 
     /****************************************************************************************************************************************************************************
@@ -242,7 +242,6 @@ public class HPMonopoly implements MouseListener, ActionListener
 
     private void initialize() 
     {
-
         if (tracing) System.out.println("Value of whoseTurn in initialize: " +whoseTurn);
 
         whoseTurn = true; //this can start at any value, just sort of randomly decided to decide that here, which means that the user plays first.
@@ -581,9 +580,8 @@ public class HPMonopoly implements MouseListener, ActionListener
                 tempS = infile.readLine().trim();
                     square[i].setName(tempS);
             } //end of for loop
-            boolean tracing2 = true; 
             
-                if (tracing2)
+                if (tracing)
                 {
                     for (int i = 0; i<36; i++)
                     {
